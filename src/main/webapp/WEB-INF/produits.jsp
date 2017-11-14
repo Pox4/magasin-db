@@ -113,7 +113,16 @@
 	</form>
 	</center>
 	
+	<br>
+	<br>
 	
+			<center>
+<h2> Liens :</h2>
+<a href="categories.html" >Liste des Categories</a>
+<br>
+<a href="fabriquants.html" >Liste des Fabriquants</a>
+	
+</center>
 
 
 <center>

@@ -20,7 +20,7 @@ public class SupprimerCategorieServlet extends HttpServlet {
 
 		gestion.deleteCategorie(categorie);
 
-		resp.sendRedirect("http://localhost:8080/jpa-101-1.0-SNAPSHOT/categories.html");
+		resp.sendRedirect("categories.html");
 	}
 
 }

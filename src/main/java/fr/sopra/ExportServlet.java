@@ -2,6 +2,7 @@ package fr.sopra;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -15,6 +16,7 @@ import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Row;
 
 @SuppressWarnings("serial")
 @WebServlet("/export.xls")
@@ -25,7 +27,7 @@ public class ExportServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+
 		String FILENAME = "export.xls";
 
 		try {
@@ -45,11 +47,9 @@ public class ExportServlet extends HttpServlet {
 
 			HSSFRow row = sheet.createRow(rowIterator);
 			HSSFCell cell = row.createCell(0);
-			cell.setCellValue("Fabriquant_ID");
-			cell = row.createCell(1);
-			cell.setCellValue("Fabriquant_Name");
-			cell = row.createCell(2);
-			cell.setCellValue("Fabriquant_Produit_Number");
+
+			printCells(sheet.createRow(rowIterator),
+					Arrays.asList("Fabriquant_ID", "Fabriquant_Name", "Fabriquant_Produit_Number"));
 
 			for (Fabriquant current : listeFabriquants) {
 				rowIterator++;
@@ -73,16 +73,10 @@ public class ExportServlet extends HttpServlet {
 
 			}
 
-			
 			rowIterator = rowIterator + 5;
-			
-			
-			cell = row.createCell(0);
-			cell.setCellValue("Categorie_ID");
-			cell = row.createCell(1);
-			cell.setCellValue("Categorie_Name");
-			cell = row.createCell(2);
-			cell.setCellValue("Categorie_Produit_Number");
+
+			printCells(sheet.createRow(rowIterator),
+					Arrays.asList("Categorie_ID", "Categorie_Name", "Categorie_Produit_Number"));
 
 			for (Categorie current : listeCategories) {
 				rowIterator++;
@@ -101,7 +95,7 @@ public class ExportServlet extends HttpServlet {
 					case 2:
 						cell.setCellValue(gestion.nbrProduitParCategorie(current.getId()));
 						break;
-						
+
 					}
 				}
 
@@ -109,16 +103,8 @@ public class ExportServlet extends HttpServlet {
 
 			rowIterator = rowIterator + 5;
 
-			cell = row.createCell(0);
-			cell.setCellValue("Produit_ID");
-			cell = row.createCell(1);
-			cell.setCellValue("Produit_Name");
-			cell = row.createCell(2);
-			cell.setCellValue("Produit_Reference");
-			cell = row.createCell(3);
-			cell.setCellValue("Produit_Categorie");
-			cell = row.createCell(4);
-			cell.setCellValue("Produit_Fabriquant");
+			printCells(sheet.createRow(rowIterator), Arrays.asList("Produit_ID", "Produit_Name", "Produit_Reference",
+					"Produit_Categorie", "Produit_Fabriquant"));
 
 			for (Produit current : listeProduits) {
 				rowIterator++;
@@ -150,7 +136,7 @@ public class ExportServlet extends HttpServlet {
 
 			wb.write(resp.getOutputStream());
 			wb.close();
-			
+
 		} catch (FileNotFoundException e) {
 
 			e.printStackTrace();
@@ -160,6 +146,11 @@ public class ExportServlet extends HttpServlet {
 			e.printStackTrace();
 
 		}
+	}
+
+	private void printCells(Row row, List<String> list) {
+		for (int i = 0; i < list.size(); i++)
+			row.createCell(i).setCellValue(list.get(i));
 	}
 
 }

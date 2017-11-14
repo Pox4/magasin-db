@@ -27,7 +27,7 @@ public class SupprimerFabriquantsServlet extends HttpServlet {
 		gestion.deleteFabriquant(fabriquant);
 		
 
-		resp.sendRedirect("http://localhost:8080/jpa-101-1.0-SNAPSHOT/fabriquants.html");
+		resp.sendRedirect("fabriquants.html");
 	}
 	
 	

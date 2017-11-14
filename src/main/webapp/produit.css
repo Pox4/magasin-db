@@ -97,15 +97,15 @@ td {
     }
 
     10% {
-        transform: translateX(-600px);
+        transform: translateX(-650px);
     }
 
     20% {
-        transform: translateX(-600px) translateY(500px);
+        transform: translateX(-650px) translateY(550px);
     }
 
     30% {
-        transform: translate(-600px, 0px);
+        transform: translate(-650px, 0px);
     }
     
     40% {
@@ -113,15 +113,15 @@ td {
     }
     
     50% {
-        transform: translate(600px, 0px);
+        transform: translate(650px, 0px);
     }
     
     60% {
-        transform: translate(600px, 500px);
+        transform: translate(650px, 550px);
     }
     
     70% {
-        transform: translate(600px, 0px);
+        transform: translate(650px, 0px);
     }
     
      80% {

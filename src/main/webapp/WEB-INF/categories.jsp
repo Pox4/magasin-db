@@ -75,6 +75,18 @@
 	
 	<button class='agrandir'>Nouvelle Categorie</button>
 	</form>
+	
+	<br>
+	<br>
+	
+	
+	<center>
+<h2> Liens :</h2>
+<a href="fabriquants.html" >Liste des Fabriquants</a>
+<br>
+<a href="produits.html" >Liste des Produits</a>
+	
+</center>
 
 </body>
 </html>

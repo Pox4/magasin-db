@@ -46,7 +46,7 @@ public class EditionProduitServlet extends HttpServlet {
 		Produit produit = gestion.findById(Integer.parseInt(req.getParameter("produitId")));
 		produit.setNom(req.getParameter("produitName"));
 		gestion.ajouterProduit(produit);
-		resp.sendRedirect("http://localhost:8080/jpa-101-1.0-SNAPSHOT/produits.html");
+		resp.sendRedirect("produits.html");
 
 	}
 	

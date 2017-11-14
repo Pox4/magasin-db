@@ -46,7 +46,7 @@ public class CategoriesServlet extends HttpServlet {
 		categorie.setNom(req.getParameter("categorieName"));
 
 		gestion.uptdateCategorie(categorie);
-		resp.sendRedirect("http://localhost:8080/jpa-101-1.0-SNAPSHOT/categories");
+		resp.sendRedirect("/categories");
 
 	}
 

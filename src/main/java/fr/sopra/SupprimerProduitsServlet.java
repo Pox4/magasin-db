@@ -21,7 +21,7 @@ public class SupprimerProduitsServlet extends HttpServlet {
 		
 		Produit produit = gestion.findById(Integer.parseInt(req.getParameter("produitSupprimer")));
 		gestion.deleteProduit(produit);
-		resp.sendRedirect("http://localhost:8080/jpa-101-1.0-SNAPSHOT/produits.html");
+		resp.sendRedirect("produits.html");
 		
 		
 	}

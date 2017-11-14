@@ -68,6 +68,17 @@
 <form method='get' action="http://localhost:8080/jpa-101-1.0-SNAPSHOT/editionfab.html" type = 'submit' >
 	<button class='agrandir'>Nouveau Fabriquant</button>
 	</form>
+	
+	
+		<center>
+<h2> Liens :</h2>
+<a href="categories.html" >Liste des Categories</a>
+<br>
+<a href="produits.html" >Liste des Produits</a>
+	
+</center>
+	
+	
 
 </body>
 </html>

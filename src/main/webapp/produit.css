@@ -1,0 +1,157 @@
+@CHARSET "UTF-8";
+
+
+
+body{
+	background-color: #8080ff;
+}
+
+h1 {
+	text-align: center;
+}
+
+table {
+	margin:auto;
+ border-width:2px; 
+ border-style:solid; 
+ border-color:black;
+ width:50%;
+ text-align: center;
+ background-color:#c0c0c0;
+ 
+ }
+ 
+td { 
+ border-width:1px;
+ border-style:solid; 
+ border-color:black;
+ width:50%;
+ text-align: center;
+ }
+ 
+ td:hover {
+	
+	background-color: #8000ff;
+}
+ 
+ th {
+ font-size: 1.5em;
+ width:50%;
+ }
+ 
+ button {
+	text-align:center;
+}
+
+ .agrandir {
+    
+    width: 250px;
+    height: 100px;
+ }
+ 
+ .agrandir2 {
+    
+    width: 120px;
+    height: 30px;
+ }
+ 
+ #OK{
+ 
+ text-align:center;
+ 
+ }
+ 
+ 
+ 
+ @-webkit-keyframes movemydiv {
+   from {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    20% {
+        transform: translateX(-150px);
+    }
+
+    40% {
+        transform: translateX(150px) translateY(0px);
+    }
+
+    60% {
+        transform: translate(0px, 0px);
+    }
+    
+    80% {
+        transform: translate(0px, 10px);
+    }
+
+    to {
+        transform: translate(0px, -10px);
+       
+        
+    }
+}
+
+@keyframes movemydiv {
+    from {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    10% {
+        transform: translateX(-600px);
+    }
+
+    20% {
+        transform: translateX(-600px) translateY(500px);
+    }
+
+    30% {
+        transform: translate(-600px, 0px);
+    }
+    
+    40% {
+        transform: translate(0px, 0px) ;
+    }
+    
+    50% {
+        transform: translate(600px, 0px);
+    }
+    
+    60% {
+        transform: translate(600px, 500px);
+    }
+    
+    70% {
+        transform: translate(600px, 0px);
+    }
+    
+     80% {
+        transform: translate(0px, 0px);
+    }
+    
+     90% {
+        transform: translate(0px, 0px);
+    }
+
+    to {
+        transform: translate(0px, 0px);
+       
+        
+    }
+}
+
+div
+{
+    
+   
+}
+
+div:hover
+{
+    -webkit-animation: movemydiv 6s ease-in-out infinite alternate;
+    animation: movemydiv 6s ease-in-out infinite alternate;
+}
+
+.recherche {
+	
+	text-align: left;
+}

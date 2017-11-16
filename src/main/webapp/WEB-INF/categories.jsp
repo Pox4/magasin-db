@@ -3,6 +3,7 @@
 <%@page import="fr.sopra.Fabriquant"%>
 <%@page import="fr.sopra.Categorie"%>
 <%@page import="fr.sopra.GestionDesProduits"%>
+
 <%@ page import="java.util.Map, java.util.HashMap, java.util.List, java.util.ArrayList" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -17,6 +18,7 @@
 
 </head>
 <body>
+<span><a href="deconnexion" >Deconnexion</a></span>
 
 <h1>Liste des Categories :</h1>
 
@@ -85,6 +87,8 @@
 <a href="fabriquants.html" >Liste des Fabriquants</a>
 <br>
 <a href="produits.html" >Liste des Produits</a>
+<br>
+<a href="utilisateurs.html" >Liste des Utilisateurs</a>
 	
 </center>
 

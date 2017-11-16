@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="fabriquant.css">
 </head>
 <body>
-
+<span><a href="deconnexion" >Deconnexion</a></span>
 <div>
 <h1>Liste des Fabriquants : </h1>
 </div>
@@ -75,6 +75,8 @@
 <a href="categories.html" >Liste des Categories</a>
 <br>
 <a href="produits.html" >Liste des Produits</a>
+<br>
+<a href="utilisateurs.html" >Liste des Utilisateurs</a>
 	
 </center>
 	

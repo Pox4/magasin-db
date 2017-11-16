@@ -11,8 +11,9 @@ import javax.persistence.TypedQuery;
 @Stateless
 public class GestionDesProduits {
 
-	@PersistenceContext(name = "Catalogue")
-	EntityManager em;
+	
+	@PersistenceContext(name = "Catalogue") // EJB
+	EntityManager em; // JPA, Base de données
 
 	public Produit findById(int id) {
 
@@ -36,6 +37,12 @@ public class GestionDesProduits {
 		categorie.setNom("Categorie" + System.nanoTime());
 		em.persist(categorie);
 		return categorie;
+	}
+	
+	public Categorie ajouterCategorie(Categorie categorie) {
+
+		return em.merge(categorie);
+
 	}
 
 	public Produit ajouterProduit(Produit produit) {

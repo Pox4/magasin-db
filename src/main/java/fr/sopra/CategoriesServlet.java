@@ -16,15 +16,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import fr.sopra.utilisateurs.GestionUtilisateur;
+import fr.sopra.utilisateurs.Utilisateurs;
+
 @WebServlet("/categories.html")
 public class CategoriesServlet extends HttpServlet {
 
 	@EJB
 	private GestionDesProduits gestion;
+	
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+		
 		List<Categorie> categories = gestion.findAllCategories();
 		Map<Integer, Long> nbrProduitsParCategorie = new HashMap<>();
 
